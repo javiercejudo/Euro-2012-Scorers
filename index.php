@@ -11,7 +11,6 @@
 	$format = array();
 	$update_db = false;
 ?>
-
 <!DOCTYPE html>
 <meta charset="UTF-8" />
 <title>Javier Cejudo | Euro 2012 Scorers</title>
@@ -20,7 +19,6 @@
 <header>
 <h1 class="fancy-font">Euro 2012 Scorers</h1>
 </header>
-
 <?php
 	$connection = new mysqli(HOST, USERNAME, PASSWD, DBNAME);
 	
@@ -72,14 +70,11 @@
 		$last_update = new DateTime($rs->fetch_object()->value);
 		$rs->close();
 		
-		//~ $now = new DateTime('now');
-		//~ $interval = $last_update->diff($now);
-		//~ $minutes_since_update = $interval->format('%a')*24*60 + $interval->format('%h')*60 + $interval->format('%i');
-		
 		$format[] = 'mysql';
 		$format[] = 'MYSQL DB (stored ' . Time::ago($last_update) . ')';		
 		$time_start = microtime(true);
-		$data_query = 'SELECT sName, iGoals, sCountry, sFlag, sFlagLarge FROM top_goal_scorers ORDER BY iGoals DESC, sName';
+		$data_query = 'SELECT sName, iGoals, sCountry, sFlag, sFlagLarge 
+			FROM top_goal_scorers ORDER BY iGoals DESC, sName';
 		if ($max_number != 0)
 			$data_query .= " LIMIT $max_number";
 		$rs = $connection->query($data_query);
@@ -101,18 +96,27 @@
         
 	$time = $time_end - $time_start;
     //var_dump($goleadores);
-	echo '<p class="technical">Response time: ' . number_format($time, 4) . ' seconds. Using ' . $format[1] . '.</p>';
+	echo '<p class="technical">Response time: ' . number_format($time, 4);
+	echo ' seconds. Using ' . $format[1] . '.</p>' . "\n";
+	
 	echo '<p class="fancy-font">Live data: ';
-	echo '<a class="likeabutton live' . Scorers::is_format_selected($format[0], 'soap') . '" href="?format=SOAP">SOAP/XML</a>&nbsp; ';
-	echo '<a class="likeabutton live' . Scorers::is_format_selected($format[0], 'json') . '" href="?format=JSON">JSON</a>&nbsp; ';
-	echo '</p>';
+	echo '<a class="likeabutton live';
+	echo Scorers::is_format_selected($format[0], 'soap');
+	echo '" href="?format=SOAP">SOAP/XML</a>&nbsp; ';
+	echo '<a class="likeabutton live';
+	echo Scorers::is_format_selected($format[0], 'json');
+	echo '" href="?format=JSON">JSON</a>&nbsp; ';
+	echo '</p>' . "\n";
+	
 	echo '<p class="fancy-font">Stored data: ';
-	echo '<a class="likeabutton stored' . Scorers::is_format_selected($format[0], 'mysql') . '" href="?format=MYSQL">MySQL DB</a>&nbsp; ';
-	echo '<a class="likeabutton stored' . Scorers::is_format_selected($format[0], 'file') . '" href="?format=FILE">Local file</a>&nbsp; ';
-	//echo '<a class="likeabutton' . Scorers::is_format_selected($format[0], 'auto') . '" href="./">AUTO</a>';
-	echo '</p>';
+	echo '<a class="likeabutton stored';
+	echo Scorers::is_format_selected($format[0], 'mysql');
+	echo '" href="?format=MYSQL">MySQL DB</a>&nbsp; ';
+	echo '<a class="likeabutton stored';
+	echo Scorers::is_format_selected($format[0], 'file');
+	echo '" href="?format=FILE">Local file</a>&nbsp; ';
+	echo '</p>' . "\n";
 ?>
-
 <table>
 <tr>
 <th><span title="Players count">#</span></th>
@@ -121,7 +125,6 @@
 <!--<th><img src="assets/soccer.gif" alt="soccer ball" title="Goals" width="16" height="16" /></th>-->
 <th><span title="Goals">G.</span></th>
 </tr>
-
 <?php
 	$i = 0;
 	$pos = 0;
@@ -138,12 +141,15 @@
 				ON DUPLICATE KEY UPDATE `iGoals`=?';
 			$stmt = $connection->prepare($insert_query);
 			$decoded_name = utf8_decode($goleador->sName);
-			$stmt->bind_param('sisssi', $decoded_name, $goleador->iGoals, $goleador->sCountry, $goleador->sFlag, $goleador->sFlagLarge, $goleador->iGoals);
+			$stmt->bind_param('sisssi', $decoded_name, $goleador->iGoals, 
+				$goleador->sCountry, $goleador->sFlag, $goleador->sFlagLarge, 
+				$goleador->iGoals);
 			$stmt->execute();
 			$stmt->close();
 			
 			// updating variable to track the freshness of stored data
-			$update_query = 'UPDATE `variables` SET `value`=? WHERE `name`=\'last_update\'';
+			$update_query = 'UPDATE `variables` SET `value`=? 
+				WHERE `name`=\'last_update\'';
 			$stmt = $connection->prepare($update_query);
 			$current_datetime = date('Y-m-d H:i:s');
 			$stmt->bind_param('s', $current_datetime);
@@ -162,14 +168,15 @@
 		$original_url_components = explode("/", $goleador->sFlag);
 		$country = substr(end($original_url_components),0,2);
 		$flag_url = 'assets/' . $country . '.gif';
-		echo '<td>' . $goleador->sName . ' <span class="flag_pole" title="' . Country::code2name(strtoupper($country)) . '"><img class="flag" src="' . $flag_url . '" alt="" width="16" height="11" /></span></td>' . "\n";
+		echo '<td>' . $goleador->sName . ' <span class="flag_pole" title="';
+		echo Country::code2name(strtoupper($country)) . '"><img class="flag" src="';
+		echo $flag_url . '" alt="" width="16" height="11" /></span></td>' . "\n";
 		echo '<td><strong>' . $goleador->iGoals . '</strong></td>' . "\n";
 		echo '</tr>' . "\n";
 		$goles_anterior = $goleador->iGoals;
 	}
 	$connection->close();
 ?>
-
 </table>
 <footer>
 <p class="technical footer">Data provided by <a href="http://footballpool.dataaccess.eu/">Data Access Europe</a> (<a href="http://footballpool.dataaccess.eu/data/info.wso">web service</a>).
