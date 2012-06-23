@@ -20,6 +20,7 @@
 <header>
 <h1 class="fancy-font">Euro 2012 Scorers</h1>
 </header>
+
 <?php
 	$connection = new mysqli(HOST, USERNAME, PASSWD, DBNAME);
 	
@@ -111,6 +112,7 @@
 	//echo '<a class="likeabutton' . Scorers::is_format_selected($format[0], 'auto') . '" href="./">AUTO</a>';
 	echo '</p>';
 ?>
+
 <table>
 <tr>
 <th><span title="Players count">#</span></th>
@@ -119,6 +121,7 @@
 <!--<th><img src="assets/soccer.gif" alt="soccer ball" title="Goals" width="16" height="16" /></th>-->
 <th><span title="Goals">G.</span></th>
 </tr>
+
 <?php
 	$i = 0;
 	$pos = 0;
@@ -166,8 +169,8 @@
 	}
 	$connection->close();
 ?>
-</table>
 
+</table>
 <footer>
 <p class="technical footer">Data provided by <a href="http://footballpool.dataaccess.eu/">Data Access Europe</a> (<a href="http://footballpool.dataaccess.eu/data/info.wso">web service</a>).
 <p class="technical footer">© <?php echo date('Y'); ?> Javier Cejudo
