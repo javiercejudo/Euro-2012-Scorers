@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOftTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Alan Dzagoev</sName>
+    <iGoals>3</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/ru.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/ru.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Mario Gómez</sName>
+    <iGoals>3</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/de.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/de.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Mario Mandzukic</sName>
+    <iGoals>3</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/hr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/hr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Andriy Shevchenko</sName>
+    <iGoals>2</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/ua.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/ua.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Cesc Fàbregas</sName>
+    <iGoals>2</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/es.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/es.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Fernando Torres</sName>
+    <iGoals>2</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/es.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/es.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Nicklas Bendtner</sName>
+    <iGoals>2</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/dk.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/dk.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Olof Mellberg</sName>
+    <iGoals>2</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/se.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/se.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Petr Jirácek</sName>
+    <iGoals>2</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/cz.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/cz.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Václav Pilar</sName>
+    <iGoals>2</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/cz.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/cz.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Andrea Pirlo</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/it.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/it.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Andy Carroll</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/en.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/en.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Antonio Di Natale</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/it.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/it.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Danny Welbeck</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/en.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/en.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>David Silva</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/es.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/es.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Dimitris Salpigidis</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/gr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/gr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Giorgos Karagounis</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/gr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/gr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Hélder Postiga</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/pt.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/pt.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Jakub Blaszczykowski</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/pl.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/pl.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Jérémy Menez</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/fr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/fr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Joleon Lescott</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/en.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/en.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Képler Ferreira (Pepe)</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/pt.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/pt.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Michael Krohn-Dehli</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/dk.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/dk.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Nikica Jelavic</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/hr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/hr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Robert Lewandowski</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/pl.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/pl.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Robin van Persie</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/nl.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/nl.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Roman Pavlyuchenko</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/ru.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/ru.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Roman Shirokov</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/ru.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/ru.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Samir Nasri</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/fr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/fr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Sean St Ledger</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/ie.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/ie.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Silvestre Varela</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/pt.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/pt.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Theo Walcott</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/en.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/en.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Theofanis Gekas</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/gr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/gr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Yohan Cabaye</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/fr.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/fr.png</sFlagLarge>
+  </tTopGoalScorer>
+  <tTopGoalScorer>
+    <sName>Zlatan Ibrahimovic</sName>
+    <iGoals>1</iGoals>
+    <sCountry>Y</sCountry>
+    <sFlag>http://footballpool.dataaccess.eu/images/flags/se.gif</sFlag>
+    <sFlagLarge>http://footballpool.dataaccess.eu/images/flags/se.png</sFlagLarge>
+  </tTopGoalScorer>
+</ArrayOftTopGoalScorer>
