@@ -1,6 +1,8 @@
 Euro 2012 Scorers
 =================
 
+Check http://javiercejudo.kodingen.com/labs/eurocup/ for the live demo.
+
 Simply playing with web services, comparing response times, and storing the
 data retrieved to improve performance using a MySQL database and a local JSON
 file.
