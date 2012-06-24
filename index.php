@@ -188,8 +188,6 @@ $global_time = $global_time_end - $global_time_start;
 and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>. 
 © <?php echo date('Y'); ?> Javier Cejudo
 <a href="https://github.com/javiercejudo/Euro-2012-Scorers">
-	<img style="position: absolute; top: 0; right: 0; border: 0;" 
-		src="assets/forkme_right_red_aa0000.png" 
-		alt="Fork me on GitHub">
+	<img class="git_ribbon" src="assets/fork_red.png" alt="Fork me on GitHub">
 </a>
 </footer>
