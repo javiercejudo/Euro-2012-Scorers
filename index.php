@@ -74,7 +74,9 @@ elseif (isset($_GET['format']) && strcasecmp($_GET['format'], 'mysql') === 0)
 	$data_query = 'SELECT sName, iGoals, sCountry, sFlag, sFlagLarge 
 		FROM top_goal_scorers ORDER BY iGoals DESC, sName';
 	if ($max_number !== 0)
+	{
 		$data_query .= " LIMIT $max_number";
+	}
 	$rs = $connection->query($data_query);
 	$goleadores = array();
 	while ($goleador = $rs->fetch_object())
