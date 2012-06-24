@@ -185,12 +185,13 @@ foreach ($goleadores as $goleador)
 	$goles_anterior = $goleador->iGoals;
 }
 
-if ($update_db === true)
-{
-	$stmt->close();
-}
+// Not necessary
+//~ if ($update_db === true)
+//~ {
+	//~ $stmt->close();
+//~ }
+//~ $connection->close();
 
-$connection->close();
 $global_time_end = microtime(true);
 $global_time = $global_time_end - $global_time_start;
 
