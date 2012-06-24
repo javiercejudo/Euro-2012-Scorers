@@ -78,7 +78,6 @@ elseif (isset($_GET['format']) && strcasecmp($_GET['format'], 'mysql') === 0)
 	$goleadores = array();
 	while ($goleador = $rs->fetch_object())
 		$goleadores[] = $goleador;
-	$rs->close();
 	$time_end = microtime(true);
 }
 elseif (!isset($_GET['format']) || strcasecmp($_GET['format'], 'file') === 0) 
@@ -172,13 +171,6 @@ foreach ($goleadores as $goleador)
 	echo '</tr>' . "\n";
 	$goles_anterior = $goleador->iGoals;
 }
-
-// Not necessary
-//~ if ($update_db === true)
-//~ {
-	//~ $stmt->close();
-//~ }
-//~ $connection->close();
 
 $global_time_end = microtime(true);
 $global_time = $global_time_end - $global_time_start;

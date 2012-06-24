@@ -17,7 +17,6 @@ class Scorers
 			WHERE name=\'last_update\'';
 		$rs = $connection->query($last_update_query);
 		$last_update = new DateTime($rs->fetch_object()->value);
-		$rs->close();
 		return $last_update;
 	}
 	
@@ -28,6 +27,5 @@ class Scorers
 		$current_datetime = date('Y-m-d H:i:s');
 		$stmt->bind_param('s', $current_datetime);
 		$stmt->execute();
-		$stmt->close();
 	}
 }
