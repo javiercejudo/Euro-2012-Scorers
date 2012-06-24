@@ -1,7 +1,7 @@
 <?php 
 $global_time_start = microtime(true);
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+//~ error_reporting(E_ALL);
+//~ ini_set('display_errors', 1);
 header('Content-type: text/html; charset=utf-8');
 require_once 'config.php';
 require_once DIRLIB . 'Country.php';
@@ -48,7 +48,8 @@ if (isset($_GET['format']) && strcasecmp($_GET['format'], 'soap') === 0)
 	
 	// This would save an XML file with the data, but it is effectevely
 	// another request, so we are going to keep the local file in JSON
-	//~ $xml_response = file_get_contents('http://footballpool.dataaccess.eu/data/info.wso/TopGoalScorers?iTopN=');
+	//~ $xml_request = 'http://footballpool.dataaccess.eu/data/info.wso/TopGoalScorers?iTopN=' . $max_number;
+	//~ $xml_response = file_get_contents($xml_request);
 	//~ file_put_contents($path_xml, $xml_response);
 } 
 elseif (isset($_GET['format']) && strcasecmp($_GET['format'], 'json') === 0) 
@@ -72,7 +73,7 @@ elseif (isset($_GET['format']) && strcasecmp($_GET['format'], 'mysql') === 0)
 	$time_start = microtime(true);
 	$data_query = 'SELECT sName, iGoals, sCountry, sFlag, sFlagLarge 
 		FROM top_goal_scorers ORDER BY iGoals DESC, sName';
-	if ($max_number != 0)
+	if ($max_number !== 0)
 		$data_query .= " LIMIT $max_number";
 	$rs = $connection->query($data_query);
 	$goleadores = array();
@@ -138,9 +139,7 @@ if ($update_db === true)
 	$stmt = $connection->prepare($insert_query);
 }
 
-$i = 0;
-$pos = 0;
-$goles_anterior = -1;
+$i = 0; $pos = 0; $goles_anterior = -1;
 foreach ($goleadores as $goleador)
 {
 	if ($update_db === true)
