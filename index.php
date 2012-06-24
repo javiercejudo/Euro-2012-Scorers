@@ -164,7 +164,7 @@ foreach ($goleadores as $goleador)
 	echo '<td><strong>' . $pos . '</strong></td>' . "\n";
 	$original_url_components = explode("/", $goleador->sFlag);
 	$country = substr(end($original_url_components),0,2);
-	$flag_url = 'assets/' . $country . '.gif';
+	$flag_url = 'assets/flags/' . $country . '.gif';
 	echo '<td>' . $goleador->sName . ' <span class="flag_pole" title="';
 	echo Country::code2name(strtoupper($country)) . '"><img class="flag" src="';
 	echo $flag_url . '" alt="" width="16" height="11" /></span></td>' . "\n";
@@ -187,4 +187,9 @@ $global_time = $global_time_end - $global_time_start;
 <p class="technical footer">Valid <a href="http://validator.w3.org/check?uri=referer">HTML5</a> 
 and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>. 
 © <?php echo date('Y'); ?> Javier Cejudo
+<a href="https://github.com/javiercejudo/Euro-2012-Scorers">
+	<img style="position: absolute; top: 0; right: 0; border: 0;" 
+		src="assets/forkme_right_red_aa0000.png" 
+		alt="Fork me on GitHub">
+</a>
 </footer>
