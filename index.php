@@ -65,14 +65,8 @@ elseif (isset($_GET['format']) && strcasecmp($_GET['format'], 'json') === 0)
 	file_put_contents($path_json, $json_response);
 }
 elseif (isset($_GET['format']) && strcasecmp($_GET['format'], 'mysql') === 0) 
-{
-	$last_update_query = 'SELECT value
-		FROM  variables
-		WHERE name=\'last_update\'';
-	$rs = $connection->query($last_update_query);
-	$last_update = new DateTime($rs->fetch_object()->value);
-	$rs->close();
-	
+{	
+	$last_update = Scorers::get_last_db_update($connection);	
 	$format[] = 'mysql';
 	$format[] = 'MYSQL DB (stored ' . Time::ago($last_update) . ')';		
 	$time_start = microtime(true);
@@ -134,13 +128,7 @@ echo '</p>' . "\n";
 if ($update_db === true)
 {
 	// updating variable to track the freshness of stored data
-	$update_query = 'UPDATE `variables` SET `value`=? 
-		WHERE `name`=\'last_update\'';
-	$stmt = $connection->prepare($update_query);
-	$current_datetime = date('Y-m-d H:i:s');
-	$stmt->bind_param('s', $current_datetime);
-	$stmt->execute();
-	$stmt->close();
+	Scorers::update_db_stamp($connection);
 
 	// preparing the inserts / updates
 	$insert_query = 'INSERT INTO `top_goal_scorers`
