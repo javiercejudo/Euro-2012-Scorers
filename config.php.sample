@@ -4,3 +4,6 @@ define('HOST', '');
 define('USERNAME', '');
 define('PASSWD', '');
 define('DBNAME', '');
+
+define('BASE', dirname(__FILE__));
+define('DIRLIB', BASE . '/lib/');

@@ -1,12 +1,12 @@
 <?php 
-
+$global_time_start = microtime(true);
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 header('Content-type: text/html; charset=utf-8');
 require_once 'config.php';
-require_once 'lib/Country.php';
-require_once 'lib/Time.php';
-require_once 'lib/Scorers.php';
+require_once DIRLIB . 'Country.php';
+require_once DIRLIB . 'Time.php';
+require_once DIRLIB . 'Scorers.php';
 $path_xml  = 'data/TopGoalScorers.xml';
 $path_json = 'data/TopGoalScorers.json';
 $format = array();
@@ -131,6 +131,26 @@ echo '</p>' . "\n";
 </tr>
 <?php
 
+if ($update_db === true)
+{
+	// updating variable to track the freshness of stored data
+	$update_query = 'UPDATE `variables` SET `value`=? 
+		WHERE `name`=\'last_update\'';
+	$stmt = $connection->prepare($update_query);
+	$current_datetime = date('Y-m-d H:i:s');
+	$stmt->bind_param('s', $current_datetime);
+	$stmt->execute();
+	$stmt->close();
+
+	// preparing the inserts / updates
+	$insert_query = 'INSERT INTO `top_goal_scorers`
+		(`sName`, `iGoals`, `sCountry`, `sFlag`, `sFlagLarge`)
+		VALUES 
+		(?,?,?,?,?)
+		ON DUPLICATE KEY UPDATE `iGoals`=?';
+	$stmt = $connection->prepare($insert_query);
+}
+
 $i = 0;
 $pos = 0;
 $goles_anterior = -1;
@@ -139,27 +159,11 @@ foreach ($goleadores as $goleador)
 	if ($update_db === true)
 	{
 		// inserting or updating the values
-		$insert_query = 'INSERT INTO `top_goal_scorers`
-			(`sName`, `iGoals`, `sCountry`, `sFlag`, `sFlagLarge`)
-			VALUES 
-			(?,?,?,?,?)
-			ON DUPLICATE KEY UPDATE `iGoals`=?';
-		$stmt = $connection->prepare($insert_query);
 		$decoded_name = utf8_decode($goleador->sName);
 		$stmt->bind_param('sisssi', $decoded_name, $goleador->iGoals, 
 			$goleador->sCountry, $goleador->sFlag, $goleador->sFlagLarge, 
 			$goleador->iGoals);
 		$stmt->execute();
-		$stmt->close();
-		
-		// updating variable to track the freshness of stored data
-		$update_query = 'UPDATE `variables` SET `value`=? 
-			WHERE `name`=\'last_update\'';
-		$stmt = $connection->prepare($update_query);
-		$current_datetime = date('Y-m-d H:i:s');
-		$stmt->bind_param('s', $current_datetime);
-		$stmt->execute();
-		$stmt->close();
 	}
 	if (isset($_GET['format']) && strcasecmp($_GET['format'], 'mysql') === 0)
 	{
@@ -180,11 +184,21 @@ foreach ($goleadores as $goleador)
 	echo '</tr>' . "\n";
 	$goles_anterior = $goleador->iGoals;
 }
+
+if ($update_db === true)
+{
+	$stmt->close();
+}
+
 $connection->close();
+$global_time_end = microtime(true);
+$global_time = $global_time_end - $global_time_start;
 
 ?>
 </table>
 <footer>
+<p class="technical footer">Up to this point, the total execution time was
+<?php echo number_format($global_time, 4) . " seconds."; ?>
 <p class="technical footer">Data provided by 
 <a href="http://footballpool.dataaccess.eu/">Data Access Europe</a> 
 (<a href="http://footballpool.dataaccess.eu/data/info.wso">web service</a>).
