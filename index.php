@@ -182,7 +182,9 @@ $global_time = $global_time_end - $global_time_start;
 <p class="technical footer">Up to this point, the total execution time was
 <?php echo number_format($global_time, 4) . " seconds."; ?>
 <p class="technical footer">Data provided by 
-<a href="http://footballpool.dataaccess.eu/">Data Access Europe</a> 
-(<a href="http://footballpool.dataaccess.eu/data/info.wso">web service</a>).
-<p class="technical footer">© <?php echo date('Y'); ?> Javier Cejudo
+<a href="http://footballpool.dataaccess.eu/">Data Access Europe</a>: 
+<a href="http://footballpool.dataaccess.eu/data/info.wso">web service</a>.
+<p class="technical footer">Valid <a href="http://validator.w3.org/check?uri=referer">HTML5</a> 
+and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>. 
+© <?php echo date('Y'); ?> Javier Cejudo
 </footer>
