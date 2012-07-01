@@ -186,7 +186,7 @@ $global_time = $global_time_end - $global_time_start;
 <a href="http://footballpool.dataaccess.eu/data/info.wso">web service</a>.
 <p class="technical footer">Valid <a href="http://validator.w3.org/check?uri=referer">HTML5</a> 
 and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS3</a>. 
-© <?php echo date('Y'); ?> Javier Cejudo
+© <?php echo date('Y'); ?> Javier Cejudo</p>
 <a href="https://github.com/javiercejudo/Euro-2012-Scorers">
 	<img class="git_ribbon" src="assets/fork_red.png" alt="Fork me on GitHub">
 </a>
